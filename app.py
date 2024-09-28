@@ -2,6 +2,12 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 from flask_mail import Mail, Message
 from datetime import datetime, timedelta
 import random
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+GOOGLE_OAUTH_CLIENT_ID = os.getenv("GOOGLE_OAUTH_CLIENT_ID")
+GOOGLE_OAUTH_CLIENT_SECRET = os.getenv("GOOGLE_OAUTH_CLIENT_SECRET")
 
 from authlib.integrations.flask_client import OAuth
  
@@ -21,8 +27,8 @@ mail = Mail(app)
 oauth = OAuth(app)
 google = oauth.register(
     name='google',
-    client_id='154232292325-gke4qtojhrffani8dn3bbagvq88ma1ps.apps.googleusercontent.com',
-    client_secret='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',
+    client_id=GOOGLE_OAUTH_CLIENT_ID,
+    client_secret=GOOGLE_OAUTH_CLIENT_SECRET,
     access_token_url='https://oauth2.googleapis.com/token',
     authorize_url='https://accounts.google.com/o/oauth2/auth',
     userinfo_endpoint='https://openidconnect.googleapis.com/v1/userinfo',
