@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import random
 
 from authlib.integrations.flask_client import OAuth
-
+ 
 app = Flask(__name__)  # Corrected __name__ here
 app.secret_key = 'random_secret_key'
 
