@@ -1,0 +1,55 @@
+<h2>Content Generation</h2>
+
+<!-- Push Notification Section -->
+<div id="pushNotification" class="content-section">
+    <h3>Push Notification Details</h3>
+    <div style="margin-bottom: 15px;">
+        <label for="pushTitle" style="display: inline-block; width: 120px;">Title:</label>
+        <input type="text" id="pushTitle" value="Default Title" readonly style="width: 300px; padding: 5px;">
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="pushSubtitle" style="display: inline-block; width: 120px;">Subtitle:</label>
+        <input type="text" id="pushSubtitle" value="Default Subtitle" readonly style="width: 300px; padding: 5px;">
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="pushMessage" style="display: inline-block; width: 120px; vertical-align: top;">Push Message:</label>
+        <textarea id="pushMessage" readonly style="width: 300px; height: 100px; padding: 5px;">Default Message</textarea>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="pushImage" style="display: inline-block; width: 120px;">Image:</label>
+        <img id="pushImage" src="dummy-image.jpg" alt="Push Notification Image" style="width:100px;">
+    </div>
+    <div>
+        <button onclick="editPushNotification()" style="padding: 10px 15px;">Edit</button>
+        <button onclick="savePushNotification()" style="padding: 10px 15px;">Save</button>
+    </div>
+</div>
+
+<!-- Email Section -->
+<div id="email" class="content-section" style="display:none;">
+    <h3>Email Details</h3>
+    <div style="margin-bottom: 15px;">
+        <label for="emailSubject" style="display: inline-block; width: 120px;">Subject:</label>
+        <input type="text" id="emailSubject" value="Default Subject" readonly style="width: 300px; padding: 5px;">
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="emailBody" style="display: inline-block; width: 120px; vertical-align: top;">Body:</label>
+        <textarea id="emailBody" readonly style="width: 300px; height: 100px; padding: 5px;">Default Body</textarea>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="emailCTA" style="display: inline-block; width: 120px;">CTA:</label>
+        <input type="text" id="emailCTA" value="Default CTA" readonly style="width: 300px; padding: 5px;">
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="emailImage" style="display: inline-block; width: 120px;">Image:</label>
+        <img id="emailImage" src="dummy-image.jpg" alt="Email Image" style="width:100px;">
+    </div>
+    <div>
+        <button onclick="editEmail()" style="padding: 10px 15px;">Edit</button>
+        <button onclick="saveEmail()" style="padding: 10px 15px;">Save</button>
+    </div>
+</div>
+<div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+    <button onclick="previousTab('contentIdeation')">Back</button>
+    <button onclick="nextTab('delivery')">Next</button>
+</div>
